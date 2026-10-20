@@ -1,0 +1,2 @@
+HEALTH_ERR 404
+JS has handleRoomClick (new code): False

@@ -1,0 +1,111 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "static/style.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "static/js/socket_main.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "static/js/script.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "static/script.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "templates/index_socketio.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "README.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "MESSAGE_PASSING.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "TODO.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "PPT_Documentation.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Project_Doc.docx",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "GUI.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "project_overview.png",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/app.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*\\.css)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*\\.js)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/templates/index_socketio.html",
+      "dest": "/templates/index_socketio.html"
+    },
+    {
+      "src": "/README.md",
+      "dest": "/README.md"
+    },
+    {
+      "src": "/MESSAGE_PASSING.md",
+      "dest": "/MESSAGE_PASSING.md"
+    },
+    {
+      "src": "/TODO.md",
+      "dest": "/TODO.md"
+    },
+    {
+      "src": "/PPT_Documentation.md",
+      "dest": "/PPT_Documentation.md"
+    },
+    {
+      "src": "/Project_Doc.docx",
+      "dest": "/Project_Doc.docx"
+    },
+    {
+      "src": "/GUI.png",
+      "dest": "/GUI.png"
+    },
+    {
+      "src": "/project_overview.png",
+      "dest": "/project_overview.png"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/app.py"
+    }
+  ]
+}
